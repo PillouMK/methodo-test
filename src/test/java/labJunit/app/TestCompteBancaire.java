@@ -12,7 +12,7 @@ class TestCompteBancaire {
 	void testDebiterSolde1() {
 		CompteBancaire cb = new CompteBancaire();
 		double debit = 15.0;
-		assertEquals(985, cb.debiterSolde(debit));
+		assertEquals(985.0, cb.debiterSolde(debit));
 		
 	}
 	
@@ -34,7 +34,7 @@ class TestCompteBancaire {
 	void testCrediterSolde1() {
 		CompteBancaire cb = new CompteBancaire();
 		double credit = 15.0;
-		assertEquals(1015, cb.crediterSolde(credit));
+		assertEquals(1015.0, cb.crediterSolde(credit));
 	}
 	
 	@Test
