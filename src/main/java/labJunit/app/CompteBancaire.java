@@ -4,6 +4,7 @@ public class CompteBancaire {
 	double solde;
 	
 	public CompteBancaire() {
+		this.solde = 1000;
 		System.out.println("Compte bancaire");
 	}
 	
@@ -11,14 +12,14 @@ public class CompteBancaire {
 		if(a >= 0) {	
 			this.solde -= a;
 			return this.solde;
-		} else return 0;
+		} else throw new Error("Le débit doit être positif");
 	}
 	
 	public double crediterSolde(double a) {
 		if(a >= 0) {	
 			this.solde += a;
 			return this.solde;
-		} else return 0;
+		} else throw new Error("Le crédit doit être positif");
 	
 	}
 
