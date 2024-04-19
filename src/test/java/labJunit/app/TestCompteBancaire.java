@@ -20,7 +20,14 @@ class TestCompteBancaire {
 	void testDebiterSolde2() {
 		CompteBancaire cb = new CompteBancaire();
 		double debit = -15.0;
-		assertEquals(985, cb.debiterSolde(debit));
+		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+	        cb.debiterSolde(debit);
+	    });
+
+	    String expectedMessage = "Le débit doit être positif";
+	    String actualMessage = exception.getMessage();
+
+	    assertTrue(actualMessage.contains(expectedMessage));
 	}
 	
 	@Test
@@ -34,6 +41,13 @@ class TestCompteBancaire {
 	void testCrediterSolde2() {
 		CompteBancaire cb = new CompteBancaire();
 		double credit = -15.0;
-		assertEquals(1015, cb.crediterSolde(credit));
+		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+	        cb.crediterSolde(credit);
+	    });
+
+	    String expectedMessage = "Le crédit doit être positif";
+	    String actualMessage = exception.getMessage();
+
+	    assertTrue(actualMessage.contains(expectedMessage));
 	}
 }

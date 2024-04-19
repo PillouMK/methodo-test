@@ -12,14 +12,14 @@ public class CompteBancaire {
 		if(a >= 0) {	
 			this.solde -= a;
 			return this.solde;
-		} else throw new Error("Le débit doit être positif");
+		} else throw new IllegalArgumentException("Le débit doit être positif");
 	}
 	
 	public double crediterSolde(double a) {
 		if(a >= 0) {	
 			this.solde += a;
 			return this.solde;
-		} else throw new Error("Le crédit doit être positif");
+		} else throw new IllegalArgumentException("Le crédit doit être positif");
 	
 	}
 
