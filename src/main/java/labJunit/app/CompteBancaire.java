@@ -5,7 +5,7 @@ public class CompteBancaire {
 	
 	public CompteBancaire() {
 		this.solde = 1000;
-		System.out.println("Compte bancaire");
+		System.out.println("Compte bancaire, bienvenue");
 	}
 	
 	public double debiterSolde(double a) {
